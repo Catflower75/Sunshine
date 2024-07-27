@@ -639,66 +639,8 @@ keybindings
 
          output_name  = \\.\DISPLAY1
 
-`resolutions <https://localhost:47990/config/#resolutions>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Description**
-   The resolutions advertised by Sunshine.
-
-   .. note:: Some versions of Moonlight, such as Moonlight-nx (Switch), rely on this list to ensure that the requested
-      resolution is supported.
-
-**Default**
-   .. code-block:: text
-
-      [
-        352x240,
-        480x360,
-        858x480,
-        1280x720,
-        1920x1080,
-        2560x1080,
-        3440x1440,
-        1920x1200,
-        3840x2160,
-        3840x1600,
-      ]
-
-**Example**
-   .. code-block:: text
-
-      resolutions = [
-        352x240,
-        480x360,
-        858x480,
-        1280x720,
-        1920x1080,
-        2560x1080,
-        3440x1440,
-        1920x1200,
-        3840x2160,
-        3840x1600,
-      ]
-
-`fps <https://localhost:47990/config/#fps>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Description**
-   The fps modes advertised by Sunshine.
-
-   .. note:: Some versions of Moonlight, such as Moonlight-nx (Switch), rely on this list to ensure that the requested
-      fps is supported.
-
-**Default**
-   ``[10, 30, 60, 90, 120]``
-
-**Example**
-   .. code-block:: text
-
-      fps = [10, 30, 60, 90, 120]
-
-min_fps_factor <https://localhost:47990/config/#min_fps_factor>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+`min_fps_factor <https://localhost:47990/config/#min_fps_factor>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Description**
    Sunshine will use this factor to calculate the minimum time between frames. Increasing this value may help when
