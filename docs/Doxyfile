@@ -24,6 +24,11 @@
 # must be first
 DOXYFILE_ENCODING = UTF-8
 
+# files and directories to process
+INPUT = ../README.md \
+        ../DOCKER_README.md \
+        ../src
+
 ALIASES = ""
 ALIASES += "examples=^^**Examples**^^@code{.cpp}"
 ALIASES += "examples_end=@endcode^^"
@@ -32,7 +37,7 @@ ALIASES += "rst_end=\endverbatim"
 
 CASE_SENSE_NAMES = YES
 DISABLE_INDEX = NO
-DOCBOOK_OUTPUT = doxydocbook
+DOCBOOK_OUTPUT = docbook
 DOCSET_BUNDLE_ID = dev.lizardbyte.Sunshine
 DOCSET_PUBLISHER_ID = dev.lizardbyte.Sunshine.documentation
 DOCSET_PUBLISHER_NAME = LizardByte
@@ -47,11 +52,7 @@ FULL_SIDEBAR = NO
 GENERATE_HTML = YES
 GENERATE_LATEX = NO
 GENERATE_TREEVIEW = YES
-
-# TODO: Sphinx/Breathe does not support Objective-C right now, so disable XML
-# https://github.com/breathe-doc/breathe/issues/129
 GENERATE_XML = NO
-
 HAVE_DOT = YES
 HTML_COLORSTYLE = LIGHT  # required with Doxygen >= 1.9.5
 HTML_COPY_CLIPBOARD = NO  # required for Doxygen >= 1.10.0
@@ -61,13 +62,12 @@ HTML_EXTRA_FILES += ../third-party/doxygen-awesome-css/doxygen-awesome-paragraph
 HTML_EXTRA_FILES += ../third-party/doxygen-awesome-css/doxygen-awesome-interactive-toc.js
 HTML_EXTRA_STYLESHEET = ../third-party/doxygen-awesome-css/doxygen-awesome.css
 HTML_HEADER = doxygen/header.html
-HTML_OUTPUT = doxyhtml
+HTML_OUTPUT = html
 INCLUDE_PATH = ../third-party/build-deps/ffmpeg/Linux-x86_64/include/
-INPUT = ../src
 INTERACTIVE_SVG = YES
-LATEX_OUTPUT = doxylatex
+LATEX_OUTPUT = latex
 MACRO_EXPANSION = YES
-MAN_OUTPUT = doxyman
+MAN_OUTPUT = man
 NUM_PROC_THREADS = 1
 PREDEFINED = DOXYGEN
 PREDEFINED += __APPLE__
@@ -82,9 +82,10 @@ PROJECT_BRIEF = "Self-hosted game stream host for Moonlight."
 PROJECT_ICON = ../sunshine.ico
 PROJECT_LOGO = ../sunshine.png
 PROJECT_NAME = Sunshine
-OUTPUT_DIRECTORY = build/doxygen
+PROJECT_NUMBER = $(READTHEDOCS_VERSION)
+OUTPUT_DIRECTORY = $(READTHEDOCS_OUTPUT)
 RECURSIVE = YES
-RTF_OUTPUT = doxyrtf
+RTF_OUTPUT = rtf
 SORT_BRIEF_DOCS = YES
 STRIP_FROM_INC_PATH = ../
 STRIP_FROM_PATH = ../
@@ -98,5 +99,4 @@ WARN_IF_INCOMPLETE_DOC = YES
 WARN_IF_UNDOC_ENUM_VAL = YES
 WARN_NO_PARAMDOC = YES
 WARNINGS = YES
-
-XML_OUTPUT = doxyxml
+XML_OUTPUT = xml

@@ -59,7 +59,6 @@ dnf -y install \
   openssl-devel \
   opus-devel \
   pulseaudio-libs-devel \
-  python3.11 \
   rpm-build \
   wget \
   which \

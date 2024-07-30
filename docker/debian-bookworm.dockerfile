@@ -58,8 +58,6 @@ apt-get install -y --no-install-recommends \
   libxtst-dev \
   nodejs \
   npm \
-  python3.11 \
-  python3.11-venv \
   udev \
   wget \
   x11-xserver-utils \

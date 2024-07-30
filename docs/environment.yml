@@ -4,9 +4,6 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - cmake
   - doxygen=1.10.0
   - graphviz=11.0.0
-  - pip
-  - python=3.11
-  - pip:
-      - -r ./requirements.txt

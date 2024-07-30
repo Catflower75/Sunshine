@@ -335,9 +335,7 @@ jobs:
             libxcb1-dev \
             libxfixes-dev \
             libxrandr-dev \
-            libxtst-dev \
-            python3 \
-            python3-venv
+            libxtst-dev
 
           # clean apt cache
           sudo apt-get clean
@@ -1101,7 +1099,6 @@ jobs:
           Remove-Item -Path doxygen-setup.exe
 
       - name: Setup python
-        # use this instead of msys2 python due to known issues using wheels, https://www.msys2.org/docs/python/
         id: setup-python
         uses: actions/setup-python@v5
         with:
@@ -1130,7 +1127,6 @@ jobs:
           cmake \
             -DBUILD_WERROR=ON \
             -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-            -DPython_EXECUTABLE='${{ steps.python-path.outputs.python-path }}' \
             -DSUNSHINE_ASSETS_DIR=assets \
             -DTESTS_SOFTWARE_ENCODER_UNAVAILABLE='skip' \
             -G "MinGW Makefiles" \

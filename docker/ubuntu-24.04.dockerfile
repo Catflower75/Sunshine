@@ -59,8 +59,6 @@ apt-get install -y --no-install-recommends \
   libxfixes-dev \
   libxrandr-dev \
   libxtst-dev \
-  python3.12 \
-  python3.12-venv \
   udev \
   wget \
   x11-xserver-utils \
